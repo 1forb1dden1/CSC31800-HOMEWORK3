@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const Product = require('./productModel'); // Adjust the path if necessary
+const Product = require('../productModel'); // Adjust the path if necessary
 
 const app = express();
 
@@ -15,6 +15,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.get("/", (req, res) => res.send("Express Running"));
+app.listen(3000, () => console.log("Server ready on port 3000."));
+module.exports = app;
 // Route handlers
 app.get('/api/items', async (req, res) => {
     try {
@@ -79,3 +82,5 @@ mongoose.connect('mongodb+srv://KEVINTESTING:wnLGX7pDGnT0zifK@cluster0.ol9fksg.m
     }).catch((error) => {
         console.log('Error:', error.message);
     });
+
+module.exports = app;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const baseURL = 'https://csc-31800-homework-3.vercel.app/';
+const baseURL = "";
 
 function App() {
   const [items, setItems] = useState([]);
