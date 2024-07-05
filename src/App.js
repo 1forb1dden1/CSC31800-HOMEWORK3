@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const baseURL = 'http://localhost:3000'; // Ensure this is the correct base URL
+const baseURL = 'https://csc-31800-homework-3.vercel.app/';
 
 function App() {
   const [items, setItems] = useState([]);
